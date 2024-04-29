@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int row, col, input;
+	int row, col;
 	
 
 	cout << "** 2차원 배열 복습 - 행렬 합 **" << endl
@@ -27,8 +27,7 @@ int main()
 
 		for (int j = 0; j < col; j++)
 		{
-			cin >> input;
-			arr[i][j] = input;
+			cin >> arr[i][j];
 		}
 	}
 
