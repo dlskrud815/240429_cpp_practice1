@@ -13,10 +13,10 @@ int main()
 	cout << endl << "행렬 원소를 입력하세요: " << endl;
 
 	//2차원 동적 배열 선언
-	int** arr = new int* [row];
+	int** matrix = new int* [row];
 	for (int i = 0; i < row; i++)
 	{
-		arr[i] = new int[col];
+		matrix[i] = new int[col];
 	}
 
 	//배열 입력
@@ -26,7 +26,7 @@ int main()
 
 		for (int j = 0; j < col; j++)
 		{
-			cin >> arr[i][j];
+			cin >> matrix[i][j];
 		}
 	}
 
@@ -39,7 +39,7 @@ int main()
 
 		for (int j = 0; j < col; j++)
 		{
-			rowSum += arr[i][j];
+			rowSum += matrix[i][j];
 		}
 		cout << rowSum << endl;
 	}
@@ -53,18 +53,18 @@ int main()
 
 		for (int j = 0; j < row; j++)
 		{
-			colSum += arr[j][i];
+			colSum += matrix[j][i];
 		}
 		cout << colSum << endl;
 
 	}
 
-	//arr 메모리 해제
+	//matrix 메모리 해제
 	for (int i = 0; i < row; i++)
 	{
-		delete[] arr[i];
+		delete[] matrix[i];
 	}
-	delete[] arr;
+	delete[] matrix;
 
 	return 0;
 }
