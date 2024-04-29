@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
 	int row, col;
-	
 
 	cout << "** 2차원 배열 복습 - 행렬 합 **" << endl
 		<< "행과 열의 수를 입력하세요: ";
