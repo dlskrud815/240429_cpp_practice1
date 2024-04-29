@@ -10,6 +10,8 @@ void performaceCheck(vector<int> test_vec);
 
 int main()
 {
+	cout << "** vector 성능 체크 **" << endl;
+
 	//1. 이름이 test_vec1이고 크기가 1인 정수형 벡터 생성
 	vector<int> test_vec1(1);
 
