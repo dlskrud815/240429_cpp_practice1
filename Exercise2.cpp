@@ -1,7 +1,10 @@
 #include <iostream>
 #include <vector>
-#include<algorithm>
+#include <algorithm> //sort¿Í unique »ç¿ë
 using namespace std;
+
+void printVector(vector<int> vector);
+void uniqueVector(vector<int> vector);
 
 int main()
 {
@@ -11,31 +14,31 @@ int main()
 	vector<int> myVector = { 10, 20, 30, 20, 40, 10, 50 };
 	
 	cout << "myVector: ";
-	for (int i = 0; i < myVector.size(); i++)
-	{
-		cout << myVector[i] << " ";
-	}
-	cout << endl << endl;
+	printVector(myVector);
 
-
-	sort(myVector.begin(), myVector.end());
-
-	cout << "myVector sorted: ";
-	for (int i = 0; i < myVector.size(); i++)
-	{
-		cout << myVector[i] << " ";
-	}
-	cout << endl << endl;
-
-
-	myVector.erase(unique(myVector.begin(), myVector.end()), myVector.end());
-
-	cout << "myVector unique: ";
-	for (int i = 0;i < myVector.size();i++)
-	{
-		cout << myVector[i] << "\t";
-	}
-	cout << endl << endl;
+	uniqueVector(myVector);
 
 	return 0;
+}
+
+void printVector(vector<int> vector)
+{
+	for (int i = 0; i < vector.size(); i++)
+	{
+		cout << vector[i] << " ";
+	}
+	cout << endl << endl;
+}
+
+void uniqueVector(vector<int> vector)
+{
+	sort(vector.begin(), vector.end());
+
+	cout << "myVector sorted: ";
+	printVector(vector);
+
+	vector.erase(unique(vector.begin(), vector.end()), vector.end());
+
+	cout << "myVector unique: ";
+	printVector(vector);
 }
