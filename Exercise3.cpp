@@ -23,7 +23,7 @@ int main()
 	//배열 입력
 	for (int i = 0; i < row; i++)
 	{
-		cout << i << "행: ";
+		cout << i+1 << "행: ";
 
 		for (int j = 0; j < col; j++)
 		{
@@ -33,12 +33,12 @@ int main()
 	}
 
 	cout << endl << "각 행의 합: " << endl;
-	for (int i = 0; i < col; i++)
+	for (int i = 0; i < row; i++)
 	{
 		int rowSum = 0;
-		cout << "행 " << i << ": ";
+		cout << "행 " << i+1 << ": ";
 
-		for (int j = 0; j < row; j++)
+		for (int j = 0; j < col; j++)
 		{
 			rowSum += arr[i][j];
 		}
@@ -49,7 +49,7 @@ int main()
 	for (int i = 0; i < col; i++)
 	{
 		int colSum = 0;
-		cout << "열 " << i << ": ";
+		cout << "열 " << i+1 << ": ";
 
 		for (int j = 0; j < row; j++)
 		{
