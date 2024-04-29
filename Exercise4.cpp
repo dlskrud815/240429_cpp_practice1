@@ -26,6 +26,7 @@ int main()
 	//3~6은 리스트에만 존재하는 함수 사용
 	//3. {1, 1, 2, 3, 4, 4, 5}가 나오도록 리스트 변경 후 출력
 	myList.sort();
+	//myList.sort(greater<int>()); //내림차순
 	printList(myList);
 
 	//4. {1, 2, 3, 4, 5}가 나오도록 리스트 변경 후 출력
