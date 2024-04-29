@@ -32,6 +32,7 @@ int main()
 		}
 	}
 
+	//각 행의 합 출력
 	cout << endl << "각 행의 합: " << endl;
 	for (int i = 0; i < row; i++)
 	{
@@ -45,6 +46,7 @@ int main()
 		cout << rowSum << endl;
 	}
 
+	//각 열의 합 출력
 	cout << endl << "각 열의 합: " << endl;
 	for (int i = 0; i < col; i++)
 	{
@@ -59,6 +61,7 @@ int main()
 
 	}
 
+	//arr 메모리 해제
 	for (int i = 0; i < row; i++)
 	{
 		delete[] arr[i];
